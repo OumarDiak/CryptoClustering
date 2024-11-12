@@ -1,5 +1,8 @@
 # CryptoClustering
 
+I used the class material such as class activities and ChatGPT to assist me with this challenge. 
+
 This analysis focuses on clustering cryptocurrency data to identify meaningful groupings based on historical price changes over various timeframes. Initially, data from a CSV file is loaded into a DataFrame and descriptive statistics are generated to understand price variations across different periods, including 24-hour, 7-day, and yearly changes. To standardize the data, StandardScaler is used to transform the values, ensuring that each metric contributes equally to the clustering model. The scaled data is then subjected to the K-Means clustering algorithm, which calculates the optimal number of clusters by examining inertia values across different k-values, plotted on an Elbow Curve. Here, the best k value is determined to be 4, as this is the point where inertia declines sharply, indicating an optimal number of clusters.
 
 To further refine clustering, Principal Component Analysis (PCA) reduces the data’s dimensions to three principal components, explaining approximately 88.9% of the variance. Using the PCA-reduced data, another Elbow Curve is generated to determine the optimal k value for this simplified data representation. The reduced data suggests that k=2 might be more appropriate, differing from the original dataset’s k=4. By clustering the cryptocurrencies based on both the original and PCA-transformed data, the model provides insights into the similarities and differences in cryptocurrency behavior, which can be visualized through scatter plots and evaluated for interpretability in terms of distinct market characteristics.
+
